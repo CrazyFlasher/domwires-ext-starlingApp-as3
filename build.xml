@@ -6,7 +6,7 @@
     <import file="${basedir}/../domwires-builder/build/ant/commons.xml"/>
 
     <property name="swc_name" value="dw-ext-starlingApp-${ver.num}.swc"/>
-    <property name="swc_name" value="dw-ext-starlingApp-${ver.num}-fat.swc"/>
+    <property name="swc_fat_name" value="dw-ext-starlingApp-${ver.num}-fat.swc"/>
     <!-- if no unit tests specified, create empty test target to avoid flash run-time exception !-->
     <target name="test"></target>
 </project>
