@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project name="domwires-ext-starlingApp" basedir="." default="commons.package_swc">
+    <property name="path" value="../domwires-as3/core/out/swc"/>
+    <property name="sftp-path-suffix" value="starlingApp"/>
+
+    <import file="${basedir}/../domwires-builder/build/ant/commons.xml"/>
+
+    <property name="swc_name" value="dw-ext-starlingApp-${ver.num}.swc"/>
+    <property name="swc_name" value="dw-ext-starlingApp-${ver.num}-fat.swc"/>
+    <!-- if no unit tests specified, create empty test target to avoid flash run-time exception !-->
+    <target name="test"></target>
+</project>
