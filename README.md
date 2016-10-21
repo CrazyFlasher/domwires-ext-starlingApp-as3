@@ -8,5 +8,5 @@ Extension is useful to render view stuff using [Starling 2.x](https://github.com
 
 ***
 
-- [SWC](http://188.166.108.195/projects/domwires/starlingApp/dw-ext-starlingApp_latest.zip)
+- [SWC](http://188.166.108.195/projects/domwires/starlingApp/domwires-ext-starlingApp_latest.zip)
 - [ASDoc](http://188.166.108.195/projects/domwires/starlingApp/doc)
