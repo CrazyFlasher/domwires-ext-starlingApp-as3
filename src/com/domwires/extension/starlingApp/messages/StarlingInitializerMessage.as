@@ -1,7 +1,7 @@
 /**
  * Created by Anton Nefjodov on 8.02.2016.
  */
-package com.crazyfm.extension.starlingApp.messages
+package com.domwires.extension.starlingApp.messages
 {
 	import com.domwires.core.common.Enum;
 

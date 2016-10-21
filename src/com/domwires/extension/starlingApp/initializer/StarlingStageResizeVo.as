@@ -1,7 +1,7 @@
 /**
  * Created by CrazyFlasher on 21.07.2016.
  */
-package com.crazyfm.extension.starlingApp.initializer
+package com.domwires.extension.starlingApp.initializer
 {
 	public class StarlingStageResizeVo
 	{

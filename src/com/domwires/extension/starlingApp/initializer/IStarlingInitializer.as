@@ -1,7 +1,7 @@
 /**
  * Created by Anton Nefjodov on 16.06.2016.
  */
-package com.crazyfm.extension.starlingApp.initializer
+package com.domwires.extension.starlingApp.initializer
 {
 	import com.domwires.core.mvc.message.IMessageDispatcher;
 

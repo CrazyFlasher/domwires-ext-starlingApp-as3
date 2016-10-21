@@ -1,10 +1,10 @@
 /**
  * Created by Anton Nefjodov on 8.02.2016.
  */
-package com.crazyfm.extension.starlingApp.initializer
+package com.domwires.extension.starlingApp.initializer
 {
-	import com.crazyfm.extension.starlingApp.configs.StarlingConfig;
-	import com.crazyfm.extension.starlingApp.messages.StarlingInitializerMessage;
+	import com.domwires.extension.starlingApp.configs.StarlingConfig;
+	import com.domwires.extension.starlingApp.messages.StarlingInitializerMessage;
 	import com.domwires.core.mvc.message.MessageDispatcher;
 
 	import flash.display.Stage;

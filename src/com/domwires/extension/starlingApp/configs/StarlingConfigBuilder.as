@@ -1,7 +1,7 @@
 /**
  * Created by CrazyFlasher on 31.08.2016.
  */
-package com.crazyfm.extension.starlingApp.configs
+package com.domwires.extension.starlingApp.configs
 {
 	import flash.display3D.Context3DProfile;
 
