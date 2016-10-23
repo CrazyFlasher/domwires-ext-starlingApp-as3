@@ -1,12 +1,27 @@
 <?xml version="1.0"?>
-<project name="domwires-ext-starlingApp" basedir="." default="commons.package_swc">
-    <property name="path" value="../domwires-as3/core/out/swc"/>
-    <property name="sftp-path-suffix" value="starlingApp"/>
+<project name="domwires-ext-starlingApp" basedir="." default="package_swc">
+    <property name="deploy.dir" value="out/swc"/>
+    <property name="flexunit.version" value="4.2.0"/>
+    <property name="swf-version" value="33"/>
+    <property name="target-player" value="22.0"/>
 
-    <import file="${basedir}/../domwires-builder/build/ant/commons.xml"/>
+    <property name="swc_name" value="dw-starlingApp.swc"/>
 
-    <property name="swc_name" value="dw-ext-starlingApp-${ver.num}.swc"/>
-    <property name="swc_fat_name" value="dw-ext-starlingApp-${ver.num}-fat.swc"/>
-    <!-- if no unit tests specified, create empty test target to avoid flash run-time exception !-->
+    <import file="${user.home}/.m2/repository/com/domwires/builder/0.9.0/builder-0.9.0.xml" optional="true"/>
+
+    <property name="ooo-build.vers" value="2.10"/>
+    <ant antfile="${basedir}/etc/bootstrap.xml"/>
+    <import file="${user.home}/.m2/ooo-build/${ooo-build.vers}/ooo-build.xml"/>
+    <import file="${user.home}/.m2/ooo-build/${ooo-build.vers}/ooo-build.xml"/>
+
+    <target name="package_swc" depends="prepare">
+        <antcall target="domwires-builder.package_swc"/>
+    </target>
+
+    <target name="prepare" depends="-init-ooo">
+        <mavendep pom="pom.xml"/>
+    </target>
+
+    <!--Override with empty, if no tests-->
     <target name="test"></target>
 </project>
