@@ -39,11 +39,6 @@ package com.domwires.extension.starlingApp.initializer
 
 		private var _starlingStageResizeVo:StarlingStageResizeVo = new StarlingStageResizeVo();
 
-		public function StarlingInitializer()
-		{
-			super();
-		}
-
 		[PostConstruct]
 		public function init():void
 		{
