@@ -18,20 +18,30 @@ package com.domwires.extension.starlingApp.initializer
 	import starling.utils.ScaleMode;
 	import starling.utils.SystemUtil;
 
+	[Event(name="STARLING_INITIALIZED", type="com.domwires.extension.starlingApp.messages.StarlingInitializerMessage")]
+	[Event(name="STARLING_STAGE_RESIZE", type="com.domwires.extension.starlingApp.messages.StarlingInitializerMessage")]
+
 	public class StarlingInitializer extends MessageDispatcher implements IStarlingInitializer
 	{
+		/**
+		 * [Autowired]
+		 */
 		[Autowired]
 		public var stage:Stage;
 
+		/**
+		 * [Autowired]
+		 */
 		[Autowired]
 		public var config:StarlingConfig;
 
+		/**
+		 * [Autowired]
+		 */
 		[Autowired]
 		public var rootClass:Class;
 
 		private var _starling:Starling;
-
-		private var _iOS:Boolean;
 
 		private var _viewPort:Rectangle = new Rectangle();
 		private var _stageSize:Rectangle = new Rectangle();
@@ -42,8 +52,6 @@ package com.domwires.extension.starlingApp.initializer
 		[PostConstruct]
 		public function init():void
 		{
-			_iOS = SystemUtil.platform == "IOS";
-
 			Starling.multitouchEnabled = true; // useful on mobile devices
 
 			_starling = new Starling(rootClass, stage, null, null, config.renderMode, config.context3DProfile);
@@ -95,7 +103,7 @@ package com.domwires.extension.starlingApp.initializer
 			_stageSize.width = config.stageWidth;
 			_stageSize.height = config.stageHeight;
 
-			RectangleUtil.fit(_stageSize, _screenSize, config.scaleMode, _iOS && config.pixelPerfectOnIOS, _viewPort);
+			RectangleUtil.fit(_stageSize, _screenSize, config.scaleMode, false, _viewPort);
 
 			if (config.resizeRoot)
 			{

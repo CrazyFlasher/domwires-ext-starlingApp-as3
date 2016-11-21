@@ -18,7 +18,6 @@ package com.domwires.extension.starlingApp.configs
 		internal var _renderMode:String = "auto";
 		internal var _antiAliasing:int = 0;
 		internal var _context3DProfile:String = Context3DProfile.BASELINE_CONSTRAINED;
-		internal var _pixelPerfectOnIOS:Boolean = true;
 		internal var _resizeRoot:Boolean = false;
 		internal var _skipUnchangedFrames:Boolean = true;
 
@@ -76,14 +75,6 @@ package com.domwires.extension.starlingApp.configs
 		public function get context3DProfile():String
 		{
 			return _context3DProfile;
-		}
-
-		/**
-		 * Use pixel perfect on iOS when scaling.
-		 */
-		public function get pixelPerfectOnIOS():Boolean
-		{
-			return _pixelPerfectOnIOS;
 		}
 
 		/**

@@ -40,11 +40,6 @@ package com.domwires.extension.starlingApp.configs
 		public var context3DProfile:String = Context3DProfile.BASELINE_CONSTRAINED;
 
 		/**
-		 * Use pixel perfect on iOS when scaling.
-		 */
-		public var pixelPerfectOnIOS:Boolean = true;
-
-		/**
 		 * If true, then <code>ResizeEvent.RESIZE</code> affects scale of <code>Starling</code> stage,
 		 * else scale of root <code>DisplayObjectContainer</code>
 		 */
@@ -64,7 +59,6 @@ package com.domwires.extension.starlingApp.configs
 			config._renderMode = renderMode;
 			config._antiAliasing = antiAliasing;
 			config._context3DProfile = context3DProfile;
-			config._pixelPerfectOnIOS = pixelPerfectOnIOS;
 			config._resizeRoot = resizeRoot;
 			config._skipUnchangedFrames = skipUnchangedFrames;
 
