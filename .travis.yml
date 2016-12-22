@@ -35,4 +35,4 @@ before_script:
   - export FLEX_HOME="$TRAVIS_BUILD_DIR/flex_sdk_4.15.0"
 
 script:
-  - cd core && ant
+  - ant
