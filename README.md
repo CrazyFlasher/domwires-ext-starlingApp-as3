@@ -1,4 +1,4 @@
-##DomWires StarlingApp Extension
+##DomWires StarlingApp Extension [![Build Status](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3.svg?branch=master)](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3)
 Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is useful to render visual stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
 
 ###Maven artifact
