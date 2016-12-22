@@ -1,12 +1,23 @@
-##DomWires-Extensions-StarlingApp
-Extension is useful to render view stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
+##DomWires StarlingApp Extension
+Extension is useful to render visual stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
 
-##Dependencies:
-- [DomWires](https://github.com/CrazyFlasher/domwires/tree/master)
-- [Starling 2.x](https://github.com/Gamua/Starling-Framework)
-(Starling SWC included to repository in [./dependencies](./dependencies) folder)
+###Maven artifact
+**Repository URL:** https://raw.github.com/CrazyFlasher/maven-repo/master
+```
+<dependency>
+  <groupId>com.domwires</groupId>
+  <artifactId>starlingApp</artifactId>
+  <version>0.9.0-SNAPSHOT</version>
+  <type>swc</type>
+</dependency>
+```
 
 ***
 
-- [SWC](http://188.166.108.195/projects/domwires/starlingApp/domwires-ext-starlingApp_latest.zip)
+###Minimum requirements
+* Adobe AIR or Flash Player 19.0
+
+***
+
+- [Latest SWC](http://188.166.108.195/projects/domwires/starlingApp/dw-starlingApp.swc)
 - [ASDoc](http://188.166.108.195/projects/domwires/starlingApp/doc)
