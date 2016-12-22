@@ -18,6 +18,6 @@ Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is u
 * Adobe AIR or Flash Player 19.0
 
 ***
-
+- [Building from source (Windows)](https://github.com/CrazyFlasher/domwires-ext-starlingApp-as3/wiki/Building-(Windows))
 - [Latest SWC](http://188.166.108.195/projects/domwires/starlingApp/dw-starlingApp.swc)
 - [ASDoc](http://188.166.108.195/projects/domwires/starlingApp/doc)
