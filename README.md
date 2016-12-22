@@ -1,5 +1,5 @@
 ##DomWires StarlingApp Extension
-Extension is useful to render visual stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
+Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is useful to render visual stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
 
 ###Maven artifact
 **Repository URL:** https://raw.github.com/CrazyFlasher/maven-repo/master
