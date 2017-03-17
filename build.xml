@@ -2,7 +2,7 @@
 <project name="domwires-ext-starlingApp" basedir="." default="package">
     <property name="flexunit.version" value="4.2.0"/>
     <property name="swf-version" value="33"/>
-    <property name="target-player" value="22.0"/>
+    <property name="target-player" value="24"/>
 
     <property name="swc_name" value="dw-starlingApp.swc"/>
 
@@ -17,7 +17,7 @@
         <antcall target="domwires-builder.package_swc"/>
     </target>
 
-    <target name="prepare" depends="-init-ooo">
+    <target name="prepare" depends="-init-ooo,prepare-sdk">
         <mavendep pom="pom.xml"/>
     </target>
 
