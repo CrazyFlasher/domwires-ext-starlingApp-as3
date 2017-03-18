@@ -6,7 +6,7 @@
 
     <property name="swc_name" value="dw-starlingApp.swc"/>
 
-    <import file="${user.home}/.m2/repository/com/domwires/builder/0.9.0-SNAPSHOT/builder-0.9.0-SNAPSHOT.xml" optional="true"/>
+    <import file="${user.home}/.m2/repository/com/domwires/builder/0.9.1-SNAPSHOT/builder-0.9.1-SNAPSHOT.xml" optional="true"/>
 
     <property name="ooo-build.vers" value="2.10"/>
     <property name="deploy.dir" location="dist"/>
@@ -17,7 +17,7 @@
         <antcall target="domwires-builder.package_swc"/>
     </target>
 
-    <target name="prepare" depends="-init-ooo,prepare-sdk">
+    <target name="prepare" depends="-init-ooo">
         <mavendep pom="pom.xml"/>
     </target>
 
