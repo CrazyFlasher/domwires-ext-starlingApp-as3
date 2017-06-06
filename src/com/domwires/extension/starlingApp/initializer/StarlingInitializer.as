@@ -95,6 +95,11 @@ package com.domwires.extension.starlingApp.initializer
 			var fullScreenWidth:int = width;
 			var fullScreenHeight:int = height;
 
+			if (width < 32) width = 32;
+			if (height < 32) height = 32;
+			if (fullScreenWidth < 32) fullScreenWidth = 32;
+			if (fullScreenHeight < 32) fullScreenHeight = 32;
+
 			_stageSize.x = _stageSize.x = _screenSize.x = _screenSize.y = 0;
 
 			_screenSize.width = fullScreenWidth;
