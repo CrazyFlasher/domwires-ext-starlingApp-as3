@@ -95,10 +95,22 @@ package com.domwires.extension.starlingApp.initializer
 			var fullScreenWidth:int = width;
 			var fullScreenHeight:int = height;
 
-			if (width < 32) width = 32;
-			if (height < 32) height = 32;
-			if (fullScreenWidth < 32) fullScreenWidth = 32;
-			if (fullScreenHeight < 32) fullScreenHeight = 32;
+			/*if (width < 64)
+			{
+				width = 64;
+			}
+			if (height < 64)
+			{
+				height = 64;
+			}
+			if (fullScreenWidth < 64)
+			{
+				fullScreenWidth = 64;
+			}
+			if (fullScreenHeight < 64)
+			{
+				fullScreenHeight = 64;
+			}*/
 
 			_stageSize.x = _stageSize.x = _screenSize.x = _screenSize.y = 0;
 
@@ -137,8 +149,8 @@ package com.domwires.extension.starlingApp.initializer
 				_starling.viewPort = _viewPort;
 			}
 
-			_starlingStageResizeVo._width = e ? e.width : w;
-			_starlingStageResizeVo._height = e ? e.height : h;
+			_starlingStageResizeVo._width = width;
+			_starlingStageResizeVo._height = height;
 
 			dispatchMessage(StarlingInitializerMessage.STARLING_STAGE_RESIZE, _starlingStageResizeVo);
 		}
