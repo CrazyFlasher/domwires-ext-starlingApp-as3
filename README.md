@@ -1,7 +1,7 @@
-##DomWires StarlingApp Extension [![Build Status](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3.svg?branch=master)](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3)
+## DomWires StarlingApp Extension [![Build Status](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3.svg?branch=master)](https://travis-ci.org/CrazyFlasher/domwires-ext-starlingApp-as3)
 Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is useful to render visual stuff using [Starling 2.x](https://github.com/Gamua/Starling-Framework)
 
-###Maven artifact
+### Maven artifact
 **Repository URL:** https://raw.github.com/CrazyFlasher/maven-repo/master
 ```
 <dependency>
@@ -14,7 +14,7 @@ Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is u
 
 ***
 
-###Minimum requirements
+### Minimum requirements
 * Adobe AIR or Flash Player 19.0
 
 ***
