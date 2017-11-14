@@ -68,16 +68,13 @@ package com.domwires.extension.starlingApp.initializer
 
 			_starling.start();
 
-			if (config.scaleMode != ScaleMode.NONE)
-			{
-				_starling.stage.addEventListener(ResizeEvent.RESIZE, onStageResize);
+			_starling.stage.addEventListener(ResizeEvent.RESIZE, onStageResize);
 
-				if (SystemUtil.platform == "IOS" || SystemUtil.platform == "AND") {
-					onStageResize(null, stage.fullScreenWidth, stage.fullScreenHeight);
-				}else
-				{
-					onStageResize(null, stage.stageWidth, stage.stageHeight);
-				}
+			if (SystemUtil.platform == "IOS" || SystemUtil.platform == "AND") {
+				onStageResize(null, stage.fullScreenWidth, stage.fullScreenHeight);
+			}else
+			{
+				onStageResize(null, stage.stageWidth, stage.stageHeight);
 			}
 
 			appInitialized();
@@ -92,46 +89,49 @@ package com.domwires.extension.starlingApp.initializer
 			var width:Number = e == null ? w : e.width;
 			var height:Number = e == null ? h : e.height;
 
-			var fullScreenWidth:int = width;
-			var fullScreenHeight:int = height;
-
-			/*if (width < 64)
+			if (config.scaleMode != ScaleMode.NONE)
 			{
-				width = 64;
-			}
-			if (height < 64)
+				var fullScreenWidth:int = width;
+				var fullScreenHeight:int = height;
+
+				_stageSize.x = _stageSize.x = _screenSize.x = _screenSize.y = 0;
+
+				_screenSize.width = fullScreenWidth;
+				_screenSize.height = fullScreenHeight;
+
+				_stageSize.width = config.stageWidth;
+				_stageSize.height = config.stageHeight;
+
+				RectangleUtil.fit(_stageSize, _screenSize, config.scaleMode, false, _viewPort);
+
+				if (config.resizeRoot)
+				{
+					_starling.root.width = config.stageWidth;  // <- same size on all devices!
+					_starling.root.height = config.stageHeight; // <- same size on all devices!
+
+					_starling.root.scaleX = _viewPort.width / config.stageWidth;
+					_starling.root.scaleY = _viewPort.height / config.stageHeight;
+					_starling.root.x = _viewPort.x;
+					_starling.root.y = _viewPort.y;
+
+					_starling.stage.stageWidth = width;
+					_starling.stage.stageHeight = height;
+
+					_viewPort.x = 0;
+					_viewPort.y = 0;
+					_viewPort.width = width;
+					_viewPort.height = height;
+
+					_starling.viewPort = _viewPort;
+				}else
+				{
+					_starling.stage.stageWidth = config.stageWidth;  // <- same size on all devices!
+					_starling.stage.stageHeight = config.stageHeight; // <- same size on all devices!
+
+					_starling.viewPort = _viewPort;
+				}
+			} else
 			{
-				height = 64;
-			}
-			if (fullScreenWidth < 64)
-			{
-				fullScreenWidth = 64;
-			}
-			if (fullScreenHeight < 64)
-			{
-				fullScreenHeight = 64;
-			}*/
-
-			_stageSize.x = _stageSize.x = _screenSize.x = _screenSize.y = 0;
-
-			_screenSize.width = fullScreenWidth;
-			_screenSize.height = fullScreenHeight;
-
-			_stageSize.width = config.stageWidth;
-			_stageSize.height = config.stageHeight;
-
-			RectangleUtil.fit(_stageSize, _screenSize, config.scaleMode, false, _viewPort);
-
-			if (config.resizeRoot)
-			{
-				_starling.root.width = config.stageWidth;  // <- same size on all devices!
-				_starling.root.height = config.stageHeight; // <- same size on all devices!
-
-				_starling.root.scaleX = _viewPort.width / config.stageWidth;
-				_starling.root.scaleY = _viewPort.height / config.stageHeight;
-				_starling.root.x = _viewPort.x;
-				_starling.root.y = _viewPort.y;
-				
 				_starling.stage.stageWidth = width;
 				_starling.stage.stageHeight = height;
 
@@ -139,12 +139,6 @@ package com.domwires.extension.starlingApp.initializer
 				_viewPort.y = 0;
 				_viewPort.width = width;
 				_viewPort.height = height;
-
-				_starling.viewPort = _viewPort;
-			}else
-			{
-				_starling.stage.stageWidth = config.stageWidth;  // <- same size on all devices!
-				_starling.stage.stageHeight = config.stageHeight; // <- same size on all devices!
 
 				_starling.viewPort = _viewPort;
 			}
