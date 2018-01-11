@@ -4,7 +4,7 @@
   <groupId>com.domwires</groupId>
   <artifactId>starlingApp</artifactId>
   <packaging>swc</packaging>
-  <version>0.9.5-SNAPSHOT</version>
+  <version>0.9.6-SNAPSHOT</version>
   <repositories>
     <repository>
       <id>CrazyFlasher</id>
@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.gamua</groupId>
       <artifactId>starling</artifactId>
-      <version>2.2.0</version>
+      <version>2.3.0</version>
       <type>swc</type>
     </dependency>
   </dependencies>
