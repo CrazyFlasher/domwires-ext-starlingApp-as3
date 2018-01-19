@@ -7,7 +7,7 @@ Extension of [DomWires](https://github.com/CrazyFlasher/domwires-as3), that is u
 <dependency>
   <groupId>com.domwires</groupId>
   <artifactId>starlingApp</artifactId>
-  <version>0.9.4-SNAPSHOT</version>
+  <version>0.9.7-SNAPSHOT</version>
   <type>swc</type>
 </dependency>
 ```
