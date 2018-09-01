@@ -59,7 +59,7 @@ package com.domwires.extension.starlingApp.initializer
 			_starling.addEventListener(Event.ROOT_CREATED, rootClassInitialized);
 			_starling.antiAliasing = config.antiAliasing;
 
-			_starling.enableErrorChecking = Capabilities.isDebugger;
+//			_starling.enableErrorChecking = Capabilities.isDebugger;
 			_starling.simulateMultitouch = false;
 		}
 
